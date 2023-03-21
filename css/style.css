@@ -13,3 +13,24 @@ body, a, i {
 }
 body {background-color: #1A1A1A;}
 
+/* =====styles==== */
+header #top #left, header #top #right {
+    position: relative;
+    height: 40px;
+    width: 43%;
+    background-color: #FFB303;
+}
+header #top #left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: skewX(-40deg);
+}
+header #top #right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform-origin: top right;
+    transform: skew(40deg);
+}
