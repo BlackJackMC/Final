@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Oxanium", cursive;
+    src: url("../fonts/Oxanium/Oxanium-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url("../fonts/Poppins/Poppins-Black.ttf"),
+         url("../fonts/Poppins/Poppins-BlackItalic.ttf"),
+         url("../fonts/Poppins/Poppins-Bold.ttf"),
+         url("../fonts/Poppins/Poppins-BoldItalic.ttf"),
+         url("../fonts/Poppins/Poppins-ExtraBold.ttf"),
+         url("../fonts/Poppins/Poppins-ExtraBoldItalic.ttf"),
+         url("../fonts/Poppins/Poppins-ExtraLight.ttf"),
+         url("../fonts/Poppins/Poppins-Italic.ttf"),
+         url("../fonts/Poppins/Poppins-LightItalic.ttf"),
+         url("../fonts/Poppins/Poppins-Medium.ttf"),
+         url("../fonts/Poppins/Poppins-MediumItalic.ttf"),
+         url("../fonts/Poppins/Poppins-Regular.ttf"),
+         url("../fonts/Poppins/Poppins-SemiBold.ttf"),
+         url("../fonts/Poppins/Poppins-SemiBoldItalic.ttf"),
+         url("../fonts/Poppins/Poppins-Thin.ttf"),
+         url("../fonts/Poppins/Poppins-ThinItalic.ttf");
+}

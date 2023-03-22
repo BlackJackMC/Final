@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
 
-
 /* =====preset===== */
 * {box-sizing: border-box;}
 ul, ol, li, p {
@@ -86,6 +85,8 @@ header #top #right .dropdown:last-child::after {
 header #top #right .dropdown button {
     padding: 0;
 }
+
+
 header #main p,
 header #main a,
 header #main i {
@@ -95,6 +96,8 @@ header #main {
     margin: 0 2rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 header #menu > button {
     background-image: url("../img/menu.svg");
@@ -116,3 +119,16 @@ header #main_menu > li {
     display: inline-block;
     margin-inline-end: 2rem;
 }
+header #logo {
+    position: absolute;
+    margin: 0 auto;
+    left: 25%;
+    right: 25%;
+    top: -24px;
+}
+
+/* =====media queries=====*/
+
+
+
+
