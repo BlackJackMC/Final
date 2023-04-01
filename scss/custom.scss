@@ -1,7 +1,7 @@
-$body-bg: #1A1A1A;
-$primary: #FFB303;
-$secondary: #1A1A1A;
-$primary-text: #000000;
-$secondary-text: #FFFFFF;
+$body-bg: rgb(26, 26, 26);
+$primary: rgb(255, 179, 3);
+$secondary: rgb(26, 26, 26);
+$primary-text: rgb(0, 0, 0);
+$secondary-text: rgb(255, 255, 255);
 
 @import "../node_modules/bootstrap/scss/bootstrap";
