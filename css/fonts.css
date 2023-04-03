@@ -21,7 +21,9 @@
          url("../fonts/Poppins/Poppins-Thin.ttf"),
          url("../fonts/Poppins/Poppins-ThinItalic.ttf");
 }
-
+html {
+    font-size: 18px !important;
+}
 h1 {
     font-size: 4.5rem !important;
     font-weight: 600 !important;
@@ -53,4 +55,34 @@ p {
 a {
     font-size: 0.9375rem !important;
     font-weight: 500 !important;
+}
+
+@media screen and (max-width: 575.98px) {
+    html {
+        font-size: 14px !important;
+    }
+    h1 {
+        font-size: 1.5rem !important;
+    }
+    h2 {
+        font-size: 1.1875rem !important;
+    }
+    h3 {
+        font-size: 1.125rem !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    html {
+        font-size: 14px !important;
+    }
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    h2 {
+        font-size: 2.1875rem !important;
+    }
+    h3 {
+        font-size: 2.125rem !important;
+    }
 }

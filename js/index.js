@@ -8,7 +8,7 @@ $(window).on("load", function () {
         let scrollTop = $(window).scrollTop();
         // console.log(original, scrollTop);
         if (scrollTop > original) {
-            img.css("inset", "auto 0 auto 0");
+            img.css("inset", "0");
         } else {
             img.css("inset", "-25px 0 auto 0");
         }
