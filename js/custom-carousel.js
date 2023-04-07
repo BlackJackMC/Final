@@ -1,13 +1,17 @@
 $("#category .owl-carousel.slider").owlCarousel({
     nav: true,
+    dots: false,
     rewind: true,
-    margin: 0,
+    margin: 10,
     navText: ["<div class=\"circle nav-prev\"><i class=\"fa-solid fa-angle-left\"></i></div>", "<div class=\"circle nav-next\"><i class=\"fa-solid fa-angle-right\"></i></div>"],
     responsive: {
         0: {
             items: 1
         },
-        576: {
+        280 : {
+            items: 1
+        },
+        500: {
             items: 2
         },
         1200: {

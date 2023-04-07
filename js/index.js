@@ -13,4 +13,10 @@ $(window).on("load", function () {
             img.css("inset", "-25px 0 auto 0");
         }
     });
+    $(".banner").on("mouseenter", function () {
+        $(this).children(".banner-background").css("transform", "scale(1.2)");
+    })
+    $(".banner").on("mouseleave", function () {
+        $(this).children(".banner-background").css("transform", "scale(1)");
+    })
 });
