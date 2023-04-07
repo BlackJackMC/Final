@@ -194,19 +194,29 @@ section {
     isolation: isolate;
     width: max-content;
     transition: all 500ms ease;
+    overflow: hidden;
 }
-.product>.first {
-    transition: opacity 500ms;
+.product>.item-image {
+    position: relative;
+}
+.product>.item-image .first {
+    transition: all 500ms ease;
     display: block;
 }
-.product>.second {
-    transition: opacity 500ms;
-    display: none;
+.product>.item-image .second {
+    position: absolute;
+    top: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    z-index: 0;
 }
 .product>.flag {
     position: absolute;
     top: 0.5rem;
     left: 0.5rem;
+}
+.product>.flag * {
+    margin-bottom: 0.5rem;
 }
 .product>.flag .discount {
     background-color: red;
@@ -214,12 +224,14 @@ section {
 .product>.flag .new {
     background-color: var(--bs-primary);
     color: var(--bs-primary-text);
-    display: none;
+    transition: all 500ms ease;
+    opacity: 0;
 }
 .product>.interact {
     position: absolute;
     top: 0.5rem;
-    right: 0.5rem;
+    right: -5rem;
+    transition: all 500ms ease;
 }
 .product>.interact button {
     padding: 0;
@@ -228,7 +240,7 @@ section {
     height: 2rem !important;
     line-height: 1rem !important;
     text-align: center;
-    display: none;
+    border: none;
 }
 .product>.description {
     text-align: center;
@@ -247,11 +259,12 @@ section {
     font-weight: 600;
 }
 .product>.description .price>.old {
-    color: var(--bs-primary);
+    color: var(--bs-secondary-text);
+    text-decoration: line-through;
 }
 .product>.description .price>.discount {
     margin-inline-start: 0.5rem;
-    display: none;
+    color: var(--bs-primary);
 }
 
 
@@ -318,6 +331,7 @@ header {
     padding-block: 0.5rem;
     background-color: var(--bs-body-bg);
     isolation: isolate;
+    transition: all 500ms ease;
 }
 header, header * {
     color: var(--bs-secondary-text);
