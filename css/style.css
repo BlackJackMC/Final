@@ -30,11 +30,10 @@ body {
     letter-spacing: 0.5px;
     line-height: 26px;
 }
-body, a, i {
-    font-size: 1rem;
-    color: var(--bs-body-bg);
+a {
+    text-decoration: none;
+    color: var(--bs-secondary-text) !important;
 }
-a {text-decoration: none;}
 a:hover, a:hover *{color: var(--bs-primary) !important;}
 section {
     margin-bottom: 4rem;
@@ -194,9 +193,15 @@ section {
     position: relative;
     isolation: isolate;
     width: max-content;
+    transition: all 500ms ease;
+}
+.product>.first {
+    transition: opacity 500ms;
+    display: block;
 }
 .product>.second {
-    display: none
+    transition: opacity 500ms;
+    display: none;
 }
 .product>.flag {
     position: absolute;
@@ -223,7 +228,32 @@ section {
     height: 2rem !important;
     line-height: 1rem !important;
     text-align: center;
+    display: none;
 }
+.product>.description {
+    text-align: center;
+}
+.product>.description .rating i {
+    font-size: 0.5rem;
+    color: #878787 !important;
+}
+.product>.description .title {
+    text-transform: capitalize;
+    margin-block: 0.5rem;
+}
+.product>.description .price {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+.product>.description .price>.old {
+    color: var(--bs-primary);
+}
+.product>.description .price>.discount {
+    margin-inline-start: 0.5rem;
+    display: none;
+}
+
 
 /* =====styles==== */
 #top .container-fluid {
@@ -251,17 +281,17 @@ section {
     top: 0;
     bottom: 0;
     z-index: -1;
-    width: 45px;
+    width: 50px;
     content: '';
     position: absolute;
     background-color: var(--bs-primary);
 }
 #top #right::after {
-    left: -26px;
+    left: -29px;
     transform: skewX(40deg) translate(10%);   
 }
 #top #left::after {
-    right: -26px;
+    right: -29px;
     transform: skewX(-40deg) translate(-10%);
 }
 #top #right .dropdown {
@@ -410,7 +440,7 @@ main {
     transition: all 500ms ease;
 }
 #category .item .item-overlay a {
-    color: var(--bs-primary-text);
+    color: var(--bs-primary-text) !important;
     text-transform: uppercase;
     font-weight: bold !important;
     font-size: xx-large !important;

@@ -15,8 +15,16 @@ $(window).on("load", function () {
     });
     $(".banner").on("mouseenter", function () {
         $(this).children(".banner-background").css("transform", "scale(1.2)");
-    })
+    });
     $(".banner").on("mouseleave", function () {
         $(this).children(".banner-background").css("transform", "scale(1)");
-    })
+    });
+    $(".product").on("mouseenter", function () {
+        $(".product>.first").fadeOut("slow", function(){
+            $(".product>.second").fadeIn("slow")
+        });
+    });
+    $(".product").on("mouseleave", function () {
+        
+    });
 });
