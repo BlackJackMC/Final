@@ -67,3 +67,18 @@ $("#home-center #feedback .owl-carousel").owlCarousel({
         }
     }
 })
+$("#blog .owl-carousel").owlCarousel({
+    nav: true,
+    dots: false,
+    rewind: true,
+    margin: 10,
+    navText: ["<div class=\"circle nav-prev\"><i class=\"fa-solid fa-angle-left\"></i></div>", "<div class=\"circle nav-next\"><i class=\"fa-solid fa-angle-right\"></i></div>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        800 : {
+            items: 3
+        }
+    }
+})
