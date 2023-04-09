@@ -18,8 +18,6 @@
 
 /* =====preset===== */
 * {box-sizing: border-box;}
-html, main {height: 100%;}
-body {min-height: 100000px;}
 ul, ol, li, p {
     list-style: none;
     padding: 0;
@@ -46,6 +44,12 @@ section {
 }
 .no-border {
     border: 0;
+}
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 .counter {
     border-radius: 50%;
@@ -132,11 +136,15 @@ section {
     margin-inline: 3rem;
 }
 .nav-prev, .nav-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 500ms ease;
 }
 .nav-prev:hover, .nav-next:hover {
     background-color: var(--bs-primary);
     transition: all 500ms ease;
+    cursor: pointer;
 }
 .nav-prev *,
 .nav-next *{
@@ -192,6 +200,7 @@ section {
     width: max-content;
     transition: all 500ms ease;
     overflow: hidden;
+    width: 100%;
 }
 .product>.item-image {
     position: relative;
@@ -266,7 +275,6 @@ section {
     color: var(--bs-primary);
 }
 .parallax {
-    height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -688,12 +696,11 @@ main {
 #home-center #feedback .owl-nav {
     margin-top: 3rem;
 }
-#video {
-    height: 100%;
-}
+
+
 #video .parallax1 {
     background-image: url("../img/parallax.jpg");
-    padding-block: 25%;
+    padding-block: 10%;
     text-align: center;
 }
 #video h2 {
@@ -712,21 +719,212 @@ main {
     align-items: center;
     margin: 0 auto;
 }
+
+
 #blog .blog-item .thumbnail {
     position: relative;
-    isolation: isolate;
-    z-index: -1;
-    height: calc(100% + 10px);
+    margin-bottom: 1rem;
+    overflow: hidden;
 }
-#blog .blog-item .thumbnail .date {
+#blog .blog-item .thumbnail img {
+    transition: all 500ms ease;
+}
+#blog .blog-item .content.trick {
+    position: unset;
+    opacity: 0;
+}
+#blog .blog-item .content {
     position: absolute;
+    bottom: 2.1875rem;
+    left: 20px;
     z-index: 3;
-    left: 10px;
-    bottom: -10px;
+}
+#blog .blog-item .content p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200 !important;
+    font-size: 0.8rem !important;
+}
+#blog .blog-item .date {
+    width: fit-content;
     background-color: var(--bs-primary);
     color: var(--bs-primary-text);
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding-inline-end: 2rem;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+#blog .blog-item .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: scale(1.2);
+    transition: all 500ms ease;
+    opacity: 0;
+    z-index: -1;
+    background-color: rgba(26, 26, 26, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#blog .blog-item .overlay a {
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    margin-inline: 0.5rem;
+    border: 1px solid var(--bs-secondary-text)
+}
+#blog .blog-item .overlay a:hover * {
+    color: var(--bs-primary-text) !important;
+}
+#blog .blog-item .overlay a:hover {
+    background-color: var(--bs-primary);
+}
+#brand .brand-item {
+    padding: 1rem;
+}
+#brand .container{
+    position: relative;
+}
+#brand .custom-nav .nav-prev, 
+#brand .custom-nav .nav-next {
+    position: absolute;
+    top: 25%;
+    z-index: 3000;
+}
+#brand .custom-nav .nav-prev {
+    left: -1px;
+}
+#brand .custom-nav .nav-next {
+    right: 1px;
+}
 
+
+footer {
+    color: var(--bs-secondary-text);
+}
+#subscribe .parallax1 {
+    background-image: url("../img/newsletter_img.jpg");
+    padding-block: 6rem;
+}
+#subscribe h4,
+#subscribe p,
+#subscribe .icon {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#subscribe h4 {
+    text-transform: uppercase;
+}
+#subscribe p {
+    font-size: 1rem !important;
+    font-weight: 100 !important;
+    font-family: 'Poppins', sans-serif;
+}
+#subscribe .icon::before {
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--bs-primary);
+    vertical-align: top;
+    display: inline-block;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+#subscribe .icon.icon1::before {
+    mask-image: url("../img/email.svg");
+    mask-size: 5rem;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url("../img/email.svg");
+    -webkit-mask-size: 5rem;
+    -webkit-mask-repeat: no-repeat;
+}
+#subscribe form {
+    margin: 0 auto;
+    width: 60%;
+}
+#subscribe input[type="text"] {
+    background-color: var(--bs-secondary-text) !important;
+    border-radius: 0;
+}
+#subscribe button[role="submit"] {
+    background: var(--bs-primary);
+    opacity: 0.65;
+}
+
+#main .title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+#main .underline.left::after{
+    margin: 0;
+}
+#main li {
+    margin-bottom: 0.5rem;
+}
+#main #info li {
+    display: flex;
+    align-items: top;
+    justify-content: flex-start
+
+}
+#main #info i {
+    color: var(--bs-primary);
+    margin-inline-end: 1rem;
+}
+#main p,
+#main a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200 !important;
+    font-size: 0.8rem !important;
+}
+#main #social {
+    display: flex;
+}
+#main #social a {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+#main #social li {
+    margin-inline: 0.25rem;
+    border-radius: 50%;
+}
+#facebook {
+    background-color: #3b5998;
+}
+#twitter {
+    background-color: #1da1f2;
+}
+#rss {
+    background-color: #fcb244;
+}
+#youtube {
+    background-color: #e82f1c;
+}
+#pinterest {
+    background-color: #e82f1c;
+}
+#instagram {
+    background-color: #e14c92;
+}
+#main #social a:hover *{
+    color: rgba(255, 255, 255, 1) !important;
+}
+#main #app {
+    display: flex;
+}
+#main #app img {
+    margin-inline-end: 0.5rem;
+}
+#after *{
+    font-size: 0.9rem !important;
+    font-weight: 100 !important;
+    font-family: 'Poppins', sans-serif;
+}
+#after img {
+    margin-inline: 0.25rem;
 }

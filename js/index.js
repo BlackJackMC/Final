@@ -57,3 +57,24 @@ $("#home-center #image").on("mouseleave", function () {
     $(this).children(".owl-carousel").children(".owl-nav").css("opacity", "0");
     console.log("Leave");
 })
+
+$("#blog .blog-item").on("mouseenter", function () {
+    $(this).children(".thumbnail").children("img").css({
+        "transform": "scale(1.1)"
+    })
+    $(this).children(".thumbnail").children(".overlay").css({
+        "transform": "scale(1)",
+        "opacity": "1",
+        "z-index": "2"
+    });
+})
+$("#blog .blog-item").on("mouseleave", function () {
+    $(this).children(".thumbnail").children("img").css({
+        "transform": "scale(1)"
+    })
+    $(this).children(".thumbnail").children(".overlay").css({
+        "transform": "scale(1.2)",
+        "opacity": "0",
+        "z-index": "-1"
+    });
+})
