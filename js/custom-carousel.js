@@ -32,6 +32,9 @@ $(".owl-carousel.product-list").owlCarousel({
         500: {
             items: 2
         },
+        900 : {
+            items: 3
+        },
         1200: {
             items: 4
         }

@@ -18,7 +18,11 @@ $(window).off('scroll', function () {
 });
 
 $(".banner").on("mouseenter", function () {
-    $(this).children(".banner-background").css("transform", "scale(1.2)");
+    let scale = $(this).attr("data-hover-scale");
+    if (scale === undefined) {
+        scale = 1;
+    }
+    $(this).children(".banner-background").css("transform", `scale(${scale})`);
 });
 $(".banner").on("mouseleave", function () {
     $(this).children(".banner-background").css("transform", "scale(1)");

@@ -67,7 +67,7 @@
     }
     .content>.title {
         margin-bottom: 1rem;
-        font-size: 2rem;
+        font-size: calc(2rem - 0.8vw);
     }
 }
 
