@@ -2,7 +2,7 @@ $("#category .owl-carousel.slider").owlCarousel({
     nav: true,
     dots: false,
     rewind: true,
-    margin: 10,
+    margin: 16,
     navText: ["<div class=\"circle nav-prev\"><i class=\"fa-solid fa-angle-left\"></i></div>", "<div class=\"circle nav-next\"><i class=\"fa-solid fa-angle-right\"></i></div>"],
     responsive: {
         0: {
@@ -32,11 +32,38 @@ $(".owl-carousel.product-list").owlCarousel({
         500: {
             items: 2
         },
-        900 : {
+        800 : {
             items: 3
         },
-        1200: {
+        1100: {
             items: 4
+        }
+    }
+})
+$("#home-center #image .owl-carousel").owlCarousel({
+    nav: true,
+    dots: false,
+    rewind: true,
+    margin: 0,
+    navText: ["<div class=\"circle nav-prev\"><i class=\"fa-solid fa-angle-left\"></i></div>", "<div class=\"circle nav-next\"><i class=\"fa-solid fa-angle-right\"></i></div>"],
+    items: 2
+})
+
+$("#home-center #feedback .owl-carousel").owlCarousel({
+    nav: true,
+    dots: false,
+    rewind: true,
+    margin: 0,
+    navText: ["<div class=\"circle nav-prev\"><i class=\"fa-solid fa-angle-left\"></i></div>", "<div class=\"circle nav-next\"><i class=\"fa-solid fa-angle-right\"></i></div>"],
+    responsive: {
+        0: {
+            items: 1
+        },
+        700: {
+            items: 2
+        },
+        1460: {
+            items: 1
         }
     }
 })

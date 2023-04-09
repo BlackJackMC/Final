@@ -56,18 +56,57 @@
     #banner>button, #banner .carousel-indicators {
         display: none;
     }
-    .content {
+    #sub-banner .content {
         text-align: center;
         margin: 0 auto;
         right: auto;
         width: 100%;
     }
-    .content>.sub-title {
+    #sub-banner .content>.sub-title {
         display: none;
     }
-    .content>.title {
+    #sub-banner .content>.title {
         margin-bottom: 1rem;
         font-size: calc(2rem - 0.8vw);
+    }
+    #about-game #about-content {
+        width: 100%;
+    }
+    #about-game #about-content .sub-title {
+        font-size: 1.3rem;
+        line-height: 2.3rem;
+        margin-bottom: 1rem;
+    }
+    #about-game #about-content .wrap>.about-content>.description {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    #home-center #service .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--bs-gutter-x);
+    }
+
+}
+@media screen and (max-width: 767.98px) {}
+
+@media screen and (max-width: 1199.98px) {
+    #main_menu, #nav #cart span#total_money{
+        display: none;
+    }
+    #top #left {
+        width: 100%;
+    }
+    #logo {
+        display: none;
+    }
+    header #logo_mobile {
+        display: initial;
+        position: unset;
+        max-width: 50%;
+        margin: 0;
+    }
+    header #logo_mobile img {
+        width: 100%;
     }
 }
 
@@ -90,43 +129,76 @@
         --bs-btn-padding-y: 0.25rem;
         font-size: 10px;
     }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-    .container {
-        max-width: 720px;
+    #home-center #service .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--bs-gutter-x);
     }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
     #banner #title h1 {
         margin-bottom: 1rem;
     }
+    #about-game #about-content {
+        width: 75%;
+    }
+    #home-center #service .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--bs-gutter-x);
+    }
 }
-
-@media screen and (max-width: 1199.98px) {
-    .container {
-        max-width: 960px;
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    #home-center #service,
+    #home-center #image {
+        width: 50%;
     }
-    #main_menu, #nav #cart span#total_money{
-        display: none;
+    #home-center #service .service-item {
+        padding-block: 1.0821rem;
     }
-    #top #left {
-        width: 100%;
-    }
-    #logo {
-        display: none;
-    }
-    header #logo_mobile {
-        display: initial;
-        position: unset;
-        max-width: 50%;
-        margin: 0;
-    }
-    header #logo_mobile img {
+    #home-center #feedback {
         width: 100%;
     }
 }
+@media screen and (min-width: 1200px) and (max-width: 1459.98px) {
+    #home-center #service,
+    #home-center #image {
+        width: 50%;
+    }
+    #home-center #service .service-item {
+        padding-block: 1.27rem;
+    }
+    #home-center #feedback {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1459.98px) {
+    #home-center #feedback .owl-nav {
+        margin-block: 2rem 1rem;
+    }
+}
 
-@media screen and (max-width: 1459.98px) {
+
+@media only screen and (min-width: 576px) {
     .container {
-        max-width: 1180px;
+        max-width: 540px !important;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 720px !important;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .container {
+        max-width: 960px !important;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1180px !important;
+    }
+}
+@media only screen and (min-width: 1460px) {
+    .container {
+        max-width: 1430px !important;
     }
 }
