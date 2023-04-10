@@ -91,8 +91,14 @@
 @media screen and (max-width: 767.98px) {}
 
 @media screen and (max-width: 991.98px) {
-    #responsive {
+    #main #responsive {
         display: none;
+    }
+    #main #mobile {
+        display: block;
+    }
+    #main p, #main a {
+        font-size: 1.3rem !important;
     }
     #main #info li {
         align-items: center;

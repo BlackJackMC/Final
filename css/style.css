@@ -920,6 +920,9 @@ footer {
 #main #app img {
     margin-inline-end: 0.5rem;
 }
+#main #mobile {
+    display: none;
+}
 #main .accordion *{
     color: var(--bs-secondary-text) !important
 }

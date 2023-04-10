@@ -17,6 +17,13 @@ $(window).off('scroll', function () {
     }
 });
 
+// $(".dropdown-hover").on("mouseenter", function () {
+//     $(this).children("dropdown-menu").addClass("show");
+// })
+// $(".dropdown-hover").on("mouseleave", function () {
+//     $(this).children("dropdown-menu").removeClass("show");
+// })
+
 $(".banner").on("mouseenter", function () {
     let scale = $(this).attr("data-hover-scale");
     if (scale === undefined) {
@@ -51,11 +58,9 @@ $("#about-game .banner .wrap").on("mouseleave", function () {
 
 $("#home-center #image").on("mouseenter", function () {
     $(this).children(".owl-carousel").children(".owl-nav").css("opacity", "1");
-    console.log("Enter");
 })
 $("#home-center #image").on("mouseleave", function () {
     $(this).children(".owl-carousel").children(".owl-nav").css("opacity", "0");
-    console.log("Leave");
 })
 
 $("#blog .blog-item").on("mouseenter", function () {
