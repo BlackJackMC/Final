@@ -29,6 +29,7 @@ $(".banner").on("mouseleave", function () {
 });
 
 $("#games").on("mouseenter", function () {
+    $(this).css("cursor", "pointer");
     $(this).dropdown("show");
     $(this).children("a[data-bs-toggle=\"dropdown\"]").addClass("hover");
 })
