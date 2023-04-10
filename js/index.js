@@ -28,11 +28,13 @@ $(".banner").on("mouseleave", function () {
     $(this).children(".banner-background").css("transform", "scale(1)");
 });
 
-$("a[data-bs-toggle=\"dropdown\"]").on("mouseenter", function () {
+$("#games").on("mouseenter", function () {
     $(this).dropdown("show");
+    $(this).children("a[data-bs-toggle=\"dropdown\"]").addClass("hover");
 })
-$("a[data-bs-toggle=\"dropdown\"]").on("mouseleave", function () {
-    
+$("#games").on("mouseleave", function () {
+    $(this).dropdown("hide");
+    $(this).children("a[data-bs-toggle=\"dropdown\"]").removeClass("hover");
 })
 
 $(".product").on("mouseenter", function () {

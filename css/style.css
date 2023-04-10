@@ -33,7 +33,7 @@ a {
     text-decoration: none;
     color: var(--bs-secondary-text) !important;
 }
-a:hover, a:hover *{color: var(--bs-primary) !important;}
+a:hover, a:hover *, .hover{color: var(--bs-primary) !important;}
 section {
     margin-bottom: 4rem;
 }
@@ -349,13 +349,13 @@ section {
     padding: 0;
 }
 header {
-    padding-block: 0.5rem;
+    padding-block-start: 0.5rem;
     background-color: var(--bs-body-bg);
     isolation: isolate;
-    transition: all 500ms ease;
 }
 header, header * {
     color: var(--bs-secondary-text);
+    transition: all 500ms ease;
 }
 header .inner {
     margin: 0 2rem;
@@ -369,9 +369,6 @@ header .inner {
     font: 300 14px/26px 'Poppins',sans-serif;
     padding-block: 0.5rem;
 }
-#main_menu {
-    text-align: center;
-}
 #sidebar-toggler {
     background-image: url("../img/menu.svg");
     background-size: cover;
@@ -382,22 +379,34 @@ header .inner {
     margin-inline-end: 1rem;
     margin-block: 2rem;
 }
-#main_menu, #sidebar-toggler {
+#sidebar-toggler {
     display: inline-block;
 }
-#main_menu > li {
-    display: inline-block;
-    margin-inline-end: 2rem;
+#main_menu {
+    width: auto;
+    padding: 0;
+    margin: 0;
 }
-#main_menu #games .title {
+#main_menu>li {
+    display: inline-flex;
+    vertical-align: top;
+    height: 100%;
+    padding-inline-end: 2rem;
+    align-items: center;
+}
+#main_menu #games-dropdown {
+    width: inherit;
+    top: -2px !important;
+}
+#main_menu #games-dropdown .title {
     font-size: 0.8rem !important;
     text-transform: uppercase;
     color: var(--bs-primary);
 }
-#main_menu #games .games-item {
+#main_menu #games-dropdown .games-item {
     padding-inline-start: var(--bs-dropdown-header-padding-x);
 }
-#main_menu #games img {
+#main_menu #games-dropdown img {
     padding-inline: var(--bs-dropdown-header-padding-x);
     padding-block-end: var(--bs-dropdown-header-padding-y);
 }
