@@ -40,10 +40,10 @@ section {
 
 /* =====custom===== */
 .no-outline {
-    outline: 0;
+    outline: 0 !important;
 }
 .no-border {
-    border: 0;
+    border: 0 !important;
 }
 .line-clamp {
     display: -webkit-box;
@@ -870,7 +870,7 @@ footer {
 
 }
 #main #info i {
-    color: var(--bs-primary);
+    color: var(--bs-primary) !important;
     margin-inline-end: 1rem;
 }
 #main p,
@@ -919,6 +919,12 @@ footer {
 }
 #main #app img {
     margin-inline-end: 0.5rem;
+}
+#main .accordion *{
+    color: var(--bs-secondary-text) !important
+}
+#main .accordion-button:not(.collapse)::after {
+    background-image: url("../img/accordion-active-btn.svg") !important;
 }
 #after *{
     font-size: 0.9rem !important;
