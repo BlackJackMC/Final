@@ -356,6 +356,7 @@ header {
 header, header * {
     color: var(--bs-secondary-text);
     transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;
 }
 header .inner {
     margin: 0 2rem;
