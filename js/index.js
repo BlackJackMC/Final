@@ -31,11 +31,11 @@ $(".banner").on("mouseleave", function () {
 $("#games").on("mouseenter", function () {
     $(this).css("cursor", "pointer");
     $(this).dropdown("show");
-    $(this).children("a[data-bs-toggle=\"dropdown\"]").addClass("hover");
+    $(this).children("a#games-link").addClass("hover");
 })
 $("#games").on("mouseleave", function () {
     $(this).dropdown("hide");
-    $(this).children("a[data-bs-toggle=\"dropdown\"]").removeClass("hover");
+    $(this).children("a#games-link").removeClass("hover");
 })
 
 $(".product").on("mouseenter", function () {
@@ -83,4 +83,12 @@ $("#blog .blog-item").on("mouseleave", function () {
         "opacity": "0",
         "z-index": "-1"
     });
+})
+
+$("a[role=\"button\"][data-bs-toggle=\"collapse\"]").on("click", function () {
+    if ($(this).hasClass("collapsed")) {
+        $(this).children("i").css("transform", "rotate(0deg)");
+    } else {
+        $(this).children("i").css("transform", "rotate(180deg)");
+    }
 })

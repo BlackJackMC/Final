@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Gamekout Game Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shop powered by no one">
+
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/owl-carousel/css/owl.theme.default.css">
+    <link rel="stylesheet" href="assets/owl-carousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/mdb-ui-kit/css/mdb.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-queries.css">
+</head>
+
+<body>
+    <div id="top">
+        <div class="container-fluid p-0">
+            <div id="left">
+                <p>Limited-Time Offers : Exclusive Black Friday ! Offer</p>
+            </div>
+            <div id="right">
+                <div class="dropdown" data-bs-theme="dark">
+                    <button class="btn dropdown-toggle no-outline no-border" data-bs-toggle="dropdown" type="button"
+                        aria-expanded="false">EUR</button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" aria-current="page">EUR</a></li>
+                        <li><a class="dropdown-item">USD</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown" data-bs-theme="dark">
+                    <button class="btn dropdown-toggle no-outline no-border" data-bs-toggle="dropdown" type="button"
+                        aria-expanded="false">En</button>
+
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" aria-current="page">English</a></li>
+                        <li><a alt="fr" class="dropdown-item">Français</a></li>
+                        <li><a alt="es" class="dropdown-item">Español</a></li>
+                        <li><a alt="de" class="dropdown-item">Deutsch</a></li>
+                        <li><a alt="it" class="dropdown-item">Italiano</a></li>
+                        <li><a alt="pl" class="dropdown-item">Polski</a></li>
+                        <li><a alt="nl" class="dropdown-item">Nederlands</a></li>
+                        <li><a alt="ru" class="dropdown-item">Русский</a></li>
+                        <li><a alt="pt" class="dropdown-item">Português PT</a></li>
+                        <li><a alt="ar" class="dropdown-item">اللغة العربية</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="offcanvas offcanvas-start w-max-content" tabindex="-1" id="sidebar">
+        <div class="offcanvas-header border-bottom border-dark">
+            <div class="offcanvas-title">
+                <h5>SHOP BY CATEGORY</h5>
+            </div>
+            <button type="button" class="btn no-border no-outline" data-bs-dismiss="offcanvas">
+                <i class="fa-solid fa-x"></i>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex justify-content-between">
+                <a href="#">Mark Sniper Sells</a>
+                <a data-bs-toggle="collapse" href="#mark_sniper_sells" role="button" aria-expanded="false"
+                    aria-controls="mark_sniper_sells">
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+            </div>
+            <div class="collapse submenu" id="mark_sniper_sells">
+                <ul>
+                    <li><a href="#">Car Racing Game</a></li>
+                    <li><a href="#">Adventure Games</a></li>
+                    <li><a href="#">Gun games</a></li>
+                    <li><a href="#">Battle Games</a></li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Shooting Games</a>
+                <a data-bs-toggle="collapse" href="#shooting_games" role="button" aria-expanded="false"
+                    aria-controls="shooting_games">
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+            </div>
+            <div class="collapse submenu" id="shooting_games">
+                <ul>
+                    <li><a href="#">PUBG</a></li>
+                    <li><a href="#">FreeFire</a></li>
+                    <li><a href="#">Counter Strikes</a></li>
+                    <li><a href="#">Black Ops</a></li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Robot Games</a>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Card Games</a>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Horror Games</a>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Logical Games</a>
+                <a data-bs-toggle="collapse" href="#logical_games" role="button" aria-expanded="false"
+                    aria-controls="logical_games">
+                    <i class="fa-solid fa-angle-down"></i>
+                </a>
+            </div>
+            <div class="collapse submenu" id="logical_games">
+                <ul>
+                    <li><a href="#">Sudoku</a></li>
+                    <li><a href="#">Tic-Tac-Toe</a></li>
+                    <li><a href="#">Candy Crush</a></li>
+                    <li><a href="#">Uno Cards</a></li>
+                </ul>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Racing Games</a>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Mario</a>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#">Bounce</a>
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="inner row">
+            <div class="col-lg-6 col-md-6 col-sm-6 d-flex" id="menu">
+                <button class="btn no-border no-outline" data-bs-toggle="offcanvas" data-bs-target="#sidebar"
+                    type="button" id="sidebar-toggler">
+                </button>
+                <ul id="main_menu">
+                    <li id="games" class="position-relative">
+                        <a href="#" data-bs-toggle="dropdown" type="button" aria-expanded="false" aria-current="page"
+                            class="no-border no-outline">GAMES</a>
+                        <ul class="dropdown-menu no-border" id="games-dropdown">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="dropdown-header title">mark sniper sells</div>
+                                    <ul class="games-item">
+                                        <li><a href="#" class="text-capitalize">car racing game</a></li>
+                                        <li><a href="#" class="text-capitalize">adventure game</a></li>
+                                        <li><a href="#" class="text-capitalize">gun game</a></li>
+                                        <li><a href="#" class="text-capitalize">battle game</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="dropdown-header title">shooting games</div>
+                                    <ul class="games-item">
+                                        <li><a href="#" class="text-capitalize">pubg</a></li>
+                                        <li><a href="#" class="text-capitalize">free fire</a></li>
+                                        <li><a href="#" class="text-capitalize">counter strike</a></li>
+                                        <li><a href="#" class="text-capitalize">black ops</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="dropdown-header title">logical games</div>
+                                    <ul class="games-item">
+                                        <li><a href="#" class="text-capitalize">sudoku</a></li>
+                                        <li><a href="#" class="text-capitalize">tic-tac-toe</a></li>
+                                        <li><a href="#" class="text-capitalize">candy crush</a></li>
+                                        <li><a href="#" class="text-capitalize">uno cards</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="img/3-0_thumb.jpg">
+                        </ul>
+                    </li>
+                    <li><a href="#">MARIO</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">BLOG</a></li>
+                </ul>
+                <a href="index.html"><img src="img/logo-1667805690.jpg" id="logo_mobile"></a>
+            </div>
+            <a href="index.html" id="logo">
+                <img src="img/logo-1667805690.jpg">
+            </a>
+            <div class="col-lg-6 col-md-6 col-sm-6" id="nav">
+                <div id="search_bar">
+                    <button class="btn no-border no-outline py-0">
+                        <i class="fa-solid fa-search icon"></i>
+                    </button>
+                </div>
+                <div id="user">
+                    <button class="btn no-border no-outline py-0">
+                        <i class="fa-regular fa-user icon"></i>
+                    </button>
+                </div>
+                <div id="compare">
+                    <button class="btn no-border no-outline py-0">
+                        <i class="fa-solid fa-repeat icon"></i>
+                        <span class="counter">0</span>
+                    </button>
+                </div>
+                <div id="favorite">
+                    <button class="btn no-border no-outline py-0">
+                        <i class="fa-regular fa-heart icon"></i>
+                        <span class="counter">0</span>
+                    </button>
+                </div>
+                <div id="cart">
+                    <button class="btn no-border no-outline py-0">
+                        <i class="fa-solid fa-cart-shopping icon"></i>
+                        <span class="counter">0</span>
+                    </button>
+                    <span id="total_money">$0.00</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="breadcrumbs">
+            <div class="d-flex justify-content-between container">
+                <div>GAMES</div>
+                <ul class="d-flex flex-row-reverse">
+                    <li class=" breadcrumb-list"><a aria-current="page">GAMES</a></li>
+                    <li class=" breadcrumb-list"><a href="index.html">HOME</a></li>
+                </ul>
+            </div>
+        </section>
+        <div class="container">
+            <div class="row">
+                <aside class="col-lg-3 col-md-3">
+                    <div class="block" id="aside-home">
+                        <div class="block-header">home</div>
+                        <div class="block-content">
+                            <div class="block-item">
+                                <div class="d-flex justify-content-between">
+                                    <a href="#">games</a>
+                                    <a data-bs-toggle="collapse" href="#games-collapse" role="button"
+                                        aria-expanded="false" aria-controls="games-collapse">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                </div>
+                                <div class="collapse submenu" id="games-collapse">
+                                    <ul>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#">Mark Sniper Sells</a>
+                                                <a data-bs-toggle="collapse" href="#mark_sniper_sells" role="button"
+                                                    aria-expanded="false" aria-controls="mark_sniper_sells">
+                                                    <i class="fa-solid fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse submenu" id="mark_sniper_sells">
+                                                <ul>
+                                                    <li><a href="#">Car Racing Game</a></li>
+                                                    <li><a href="#">Adventure Games</a></li>
+                                                    <li><a href="#">Gun games</a></li>
+                                                    <li><a href="#">Battle Games</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#">Shooting Games</a>
+                                                <a data-bs-toggle="collapse" href="#shooting_games" role="button"
+                                                    aria-expanded="false" aria-controls="shooting_games">
+                                                    <i class="fa-solid fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse submenu" id="shooting_games">
+                                                <ul>
+                                                    <li><a href="#">PUBG</a></li>
+                                                    <li><a href="#">FreeFire</a></li>
+                                                    <li><a href="#">Counter Strikes</a></li>
+                                                    <li><a href="#">Black Ops</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex justify-content-between">
+                                                <a href="#">Logical Games</a>
+                                                <a data-bs-toggle="collapse" href="#logical_games" role="button"
+                                                    aria-expanded="false" aria-controls="logical_games">
+                                                    <i class="fa-solid fa-angle-down"></i>
+                                                </a>
+                                            </div>
+                                            <div class="collapse submenu" id="logical_games">
+                                                <ul>
+                                                    <li><a href="#">Sudoku</a></li>
+                                                    <li><a href="#">Tic-Tac-Toe</a></li>
+                                                    <li><a href="#">Candy Crush</a></li>
+                                                    <li><a href="#">Uno Cards</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block-item">
+                                <a href="#">robot games</a>
+                            </div>
+                            <div class="block-item">
+                                <a href="#">card games</a>
+                            </div>
+                            <div class="block-item">
+                                <a href="#">horror games</a>
+                            </div>
+                            <div class="block-item">
+                                <a href="#">racing games</a>
+                            </div>
+                            <div class="block-item">
+                                <a href="#">mario</a>
+                            </div>
+                            <div class="block-item">
+                                <a href="#">bounce</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block" id="aside-filter">
+                        <div class="block-header">filter by</div>
+                        <div class="block-content">
+                            <div class="filter-block">
+                                <div class="filter-title">category</div>
+                                <div class="checkbox d-flex justify-content-between">
+                                    <label><input type="checkbox" value="">logical games</label>
+                                    <span class="amount">(15)</span>
+                                </div>
+                                <div class="checkbox d-flex justify-content-between">
+                                    <label><input type="checkbox" value="">mark sniper sells</label>
+                                    <span class="amount">(15)</span>
+                                </div>
+                                <div class="checkbox d-flex justify-content-between">
+                                    <label><input type="checkbox" value="">shooting games</label>
+                                    <span class="amount">(15)</span>
+                                </div>
+                            </div>
+                            <div class="filter-block">
+                                <div class="filter-title">color</div>
+                                <div class="color">
+                                    <a href="#" class="d-flex w-100 justify-content-between">
+                                        <div><i class="fa-solid fa-circle"></i> Taupe</div> <span
+                                            class="amount">(1)</span>
+                                    </a>
+                                </div>
+                                <div class="color">
+                                    <a href="#" class="d-flex w-100 justify-content-between">
+                                        <div><i class="fa-solid fa-circle"></i> White</div> <span
+                                            class="amount">(1)</span>
+                                    </a>
+                                </div>
+                                <div class="color">
+                                    <a href="#" class="d-flex w-100 justify-content-between">
+                                        <div><i class="fa-solid fa-circle"></i> Red</div> <span
+                                            class="amount">(1)</span>
+                                    </a>
+                                </div>
+                                <div class="color">
+                                    <a href="#" class="d-flex w-100 justify-content-between">
+                                        <div><i class="fa-solid fa-circle"></i> Orange</div> <span
+                                            class="amount">(1)</span>
+                                    </a>
+                                </div>
+                                <div class="color">
+                                    <a href="#" class="d-flex w-100 justify-content-between">
+                                        <div><i class="fa-solid fa-circle"></i> Blue</div> <span
+                                            class="amount">(1)</span>
+                                    </a>
+                                </div>
+                                <div class="color">
+                                    <a href="#" class="d-flex w-100 justify-content-between">
+                                        <div><i class="fa-solid fa-circle"></i> Green</div> <span
+                                            class="amount">(1)</span>
+                                    </a>
+                                </div>
+                                <div class="color">
+                                    <a href="#" class="d-flex w-100 justify-content-between">
+                                        <div><i class="fa-solid fa-circle"></i> Yellow</div> <span
+                                            class="amount">(1)</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="filter-block">
+                                <div class="filter-title">price</div>
+                                <div class="multi-range-slider"></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <main class="col-lg-9 col-md-9">
+
+                </main>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <section id="subscribe">
+            <div class="parallax parallax1">
+                <div class="container">
+                    <div class="icon icon1"></div>
+                    <h4>latest news and updates</h4>
+                    <p>Subscribe to our latest newsletter to get news about special discounts.</p>
+                    <form class="input-group">
+                        <input type="text" class="form-control" placeholder="Your email address" id="email">
+                        <button class="btn btn-primary disabled" id="submit" role="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="main">
+            <div class="container" id="responsive">
+                <div class="row">
+                    <div class="col-lg-3" id="info">
+                        <div class="title underline left">store information</div>
+                        <ul class="content">
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>Gamekout Game Store 507-Union Trade Centre
+                                    France</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                <p> (+91) 9876-543-210</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                <a>sales@yourcompany.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="title underline left">products</div>
+                        <ul>
+                            <li><a href="#">Prices drop</a></li>
+                            <li><a href="#">New products</a></li>
+                            <li><a href="#">Best sales</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="title underline left">OUR COMPANY</div>
+                        <ul>
+                            <li><a href="#">Delivery</a></li>
+                            <li><a href="#">Legal Notice</a></li>
+                            <li><a href="#">Terms and conditions of use</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Secure payment</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="title underline left">YOUR ACCOUNT</div>
+                        <ul>
+                            <li><a href="#">Personal info</a></li>
+                            <li><a href="#">Orders</a></li>
+                            <li><a href="#">Credit slips</a></li>
+                            <li><a href="#">Addresses</a></li>
+                            <li><a href="#">Vouchers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="title underline left">SOCIAL FOLLOW LINKS</div>
+                        <ul id="social">
+                            <li id="facebook"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li id="twitter"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li id="rss"><a href="#"><i class="fa-solid fa-rss"></i></a></li>
+                            <li id="youtube"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li id="pinterest"><a href="#"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                            <li id="instagram"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                        <div class="title underline left">DOWNLOAD APP</div>
+                        <ul id="app">
+                            <li><a href="#"><img src="img/app-icon-1.png"></a></li>
+                            <li><a href="#"><img src="img/app-icon-2.png"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="mobile">
+                <div class="accordion accordion-flush" id="info-footer">
+                    <div class="accordion-item no-border no-outline">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-info" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <div class="title fs-2">Store information</div>
+                            </button>
+                        </h2>
+                        <div id="flush-info" class="accordion-collapse collapse" data-bs-parent="#info-footer">
+                            <div class="accordion-body" id="info">
+                                <ul class="content">
+                                    <li>
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <p>Gamekout Game Store 507-Union Trade Centre
+                                            France</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-phone"></i>
+                                        <p> (+91) 9876-543-210</p>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <a>sales@yourcompany.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="product-footer">
+                    <div class="accordion-item no-border no-outline">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-product" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <div class="title fs-2">products</div>
+                            </button>
+                        </h2>
+                        <div id="flush-product" class="accordion-collapse collapse" data-bs-parent="#product-footer">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="#">Prices drop</a></li>
+                                    <li><a href="#">New products</a></li>
+                                    <li><a href="#">Best sales</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                    <li><a href="#">Sitemap</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="company-footer">
+                    <div class="accordion-item no-border no-outline">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-company" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <div class="title fs-2">OUR COMPANY</div>
+                            </button>
+                        </h2>
+                        <div id="flush-company" class="accordion-collapse collapse" data-bs-parent="#company-footer">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="#">Delivery</a></li>
+                                    <li><a href="#">Legal Notice</a></li>
+                                    <li><a href="#">Terms and conditions of use</a></li>
+                                    <li><a href="#">About us</a></li>
+                                    <li><a href="#">Secure payment</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion accordion-flush" id="account-footer">
+                    <div class="accordion-item no-border no-outline">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-account" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <div class="title fs-2">YOUR ACCOUNT</div>
+                            </button>
+                        </h2>
+                        <div id="flush-account" class="accordion-collapse collapse" data-bs-parent="#account-footer">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li><a href="#">Personal info</a></li>
+                                    <li><a href="#">Orders</a></li>
+                                    <li><a href="#">Credit slips</a></li>
+                                    <li><a href="#">Addresses</a></li>
+                                    <li><a href="#">Vouchers</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <div class="d-flex justify-content-between container" id="after">
+            <a href="#">© 2023 - Ecommerce software by PrestaShop™ but cloned by Phan Quoc Bao</a>
+            <div>
+                <img src="img/visa.png">
+                <img src="img/master_card.png">
+                <img src="img/american_express.png">
+                <img src="img/paypal.png">
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/jquery/jquery.min.js"></script>
+    <script src="assets/mdb-ui-kit/js/mdb.min.js"></script>
+    <script src="assets/owl-carousel/js/owl.carousel.min.js"></script> <!--For sliders-->
+    <script src="js/custom-carousel.js"></script> <!--For banner-->
+    <script src="js/index.js"></script>
+</body>
+
+</html>

@@ -286,6 +286,13 @@ section {
 
 
 
+
+
+
+
+/***************HEADER, FOOTER*****************/
+
+
 #top .container-fluid {
     font-weight: 400;
     display: flex;
@@ -328,21 +335,30 @@ section {
     right: -29px;
     transform: skewX(-40deg) translate(-10%);
 }
-#top #right .dropdown {
-    z-index: 1030;
+.breadcrumb-list {
+    position: relative;
+}
+#top #right .dropdown,
+.breadcrumb-list {
     padding-inline-start: 1rem;
     margin-inline-start: 1rem;
 }
-#top #right .dropdown::after {
+#top #right .dropdown {
+    z-index: 1030;
+}
+#top #right .dropdown::after,
+.breadcrumb-list::after {
     content: '';
     position: absolute;
     inset: 0 auto 0 0;
+    z-index: 1000;
     width: 1px;
     height: 1rem;
     margin: auto;
     background-color: #88620A;
 }
-#top #right .dropdown:last-child::after {
+#top #right .dropdown:last-child::after,
+.breadcrumb-list:last-child::after {
     display: none;
 }
 #top #right .dropdown button {
@@ -395,9 +411,13 @@ header .inner {
     padding-inline-end: 2rem;
     align-items: center;
 }
+#main_menu>li>a[aria-current="page"] {
+    color: var(--bs-primary) !important;
+}
 #main_menu #games-dropdown {
     width: inherit;
     top: -2px !important;
+    border: 2px solid #343434 !important;
 }
 #main_menu #games-dropdown .title {
     font-size: 0.8rem !important;
@@ -409,7 +429,7 @@ header .inner {
 }
 #main_menu #games-dropdown img {
     padding-inline: var(--bs-dropdown-header-padding-x);
-    padding-block-end: var(--bs-dropdown-header-padding-y);
+    margin-block-end: var(--bs-dropdown-header-padding-y);
 }
 #logo_mobile {
     display: none;
@@ -452,6 +472,151 @@ header.fixed-top #logo {
     display: inline-block;
 }
 
+footer {
+    color: var(--bs-secondary-text);
+}
+#subscribe .parallax1 {
+    background-image: url("../img/newsletter_img.jpg");
+    padding-block: 6rem;
+}
+#subscribe h4,
+#subscribe p,
+#subscribe .icon {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#subscribe h4 {
+    text-transform: uppercase;
+}
+#subscribe p {
+    font-size: 1rem !important;
+    font-weight: 100 !important;
+    font-family: 'Poppins', sans-serif;
+}
+#subscribe .icon::before {
+    content: '';
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--bs-primary);
+    vertical-align: top;
+    display: inline-block;
+    mask-position: center;
+    -webkit-mask-position: center;
+}
+#subscribe .icon.icon1::before {
+    mask-image: url("../img/email.svg");
+    mask-size: 5rem;
+    mask-repeat: no-repeat;
+    -webkit-mask-image: url("../img/email.svg");
+    -webkit-mask-size: 5rem;
+    -webkit-mask-repeat: no-repeat;
+}
+#subscribe form {
+    margin: 0 auto;
+    width: 60%;
+}
+#subscribe input[type="text"] {
+    background-color: var(--bs-secondary-text) !important;
+    border-radius: 0;
+}
+#subscribe button[role="submit"] {
+    background: var(--bs-primary);
+    opacity: 0.65;
+}
+
+#main .title {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+#main .underline.left::after{
+    margin: 0;
+}
+#main li {
+    margin-bottom: 0.5rem;
+}
+#main #info li {
+    display: flex;
+    align-items: top;
+    justify-content: flex-start
+
+}
+#main #info i {
+    color: var(--bs-primary) !important;
+    margin-inline-end: 1rem;
+}
+#main p,
+#main a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200 !important;
+    font-size: 0.8rem !important;
+}
+#main #social {
+    display: flex;
+}
+#main #social a {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+}
+#main #social li {
+    margin-inline: 0.25rem;
+    border-radius: 50%;
+}
+#facebook {
+    background-color: #3b5998;
+}
+#twitter {
+    background-color: #1da1f2;
+}
+#rss {
+    background-color: #fcb244;
+}
+#youtube {
+    background-color: #e82f1c;
+}
+#pinterest {
+    background-color: #e82f1c;
+}
+#instagram {
+    background-color: #e14c92;
+}
+#main #social a:hover *{
+    color: rgba(255, 255, 255, 1) !important;
+}
+#main #app {
+    display: flex;
+}
+#main #app img {
+    margin-inline-end: 0.5rem;
+}
+#main #mobile {
+    display: none;
+}
+#main .accordion *{
+    color: var(--bs-secondary-text) !important
+}
+#main .accordion-button:not(.collapse)::after {
+    background-image: url("../img/accordion-active-btn.svg") !important;
+}
+#after *{
+    font-size: 0.9rem !important;
+    font-weight: 100 !important;
+    font-family: 'Poppins', sans-serif;
+}
+#after img {
+    margin-inline: 0.25rem;
+}
+
+
+
+
+
+
+
+/***************INDEX.HTML*****************/
 
 main {
     color: var(--bs-secondary-text)
@@ -828,140 +993,61 @@ main {
 }
 
 
-footer {
-    color: var(--bs-secondary-text);
+
+
+
+
+
+
+
+
+
+
+
+/***************GAMES.HTML*****************/
+
+.block {
+    border: 2px solid #343434;
+    margin-bottom: var(--bs-gutter-x);
 }
-#subscribe .parallax1 {
-    background-image: url("../img/newsletter_img.jpg");
-    padding-block: 6rem;
+.block > .block-header,
+.block > .block-content {
+    padding: 1rem;
 }
-#subscribe h4,
-#subscribe p,
-#subscribe .icon {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-#subscribe h4 {
+.block > .block-header {
+    background-color: #343434;
     text-transform: uppercase;
+    font-weight: bold;
 }
-#subscribe p {
-    font-size: 1rem !important;
-    font-weight: 100 !important;
+.block > .block-content .block-item {
+    margin-block: 0.2rem;
+}
+.block > .block-content .block-item a {
+    font-weight: 300 !important;
+    font-size: 0.7rem !important;
     font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
 }
-#subscribe .icon::before {
-    content: '';
-    width: 5rem;
-    height: 5rem;
-    background-color: var(--bs-primary);
-    vertical-align: top;
-    display: inline-block;
-    mask-position: center;
-    -webkit-mask-position: center;
+a[data-bs-toggle="collapse"][role="button"] i {
+    transition: all 300ms ease;
 }
-#subscribe .icon.icon1::before {
-    mask-image: url("../img/email.svg");
-    mask-size: 5rem;
-    mask-repeat: no-repeat;
-    -webkit-mask-image: url("../img/email.svg");
-    -webkit-mask-size: 5rem;
-    -webkit-mask-repeat: no-repeat;
+#breadcrumbs {
+    background: url("../img/breadcrumb_img.jpg");
+    padding-block: 2rem;
 }
-#subscribe form {
-    margin: 0 auto;
-    width: 60%;
-}
-#subscribe input[type="text"] {
-    background-color: var(--bs-secondary-text) !important;
-    border-radius: 0;
-}
-#subscribe button[role="submit"] {
-    background: var(--bs-primary);
-    opacity: 0.65;
-}
-
-#main .title {
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-weight: 600;
-}
-#main .underline.left::after{
-    margin: 0;
-}
-#main li {
-    margin-bottom: 0.5rem;
-}
-#main #info li {
-    display: flex;
-    align-items: top;
-    justify-content: flex-start
-
-}
-#main #info i {
+#breadcrumbs a[aria-current="page"] {
     color: var(--bs-primary) !important;
-    margin-inline-end: 1rem;
 }
-#main p,
-#main a {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 200 !important;
-    font-size: 0.8rem !important;
+#breadcrumbs a:not([aria-current="page"]):hover {
+    color: var(--bs-secondary-text) !important;
+    text-decoration: underline !important;;
 }
-#main #social {
-    display: flex;
+#breadcrumbs .breadcrumb-list::after {
+    background-color: var(--bs-secondary-text);
 }
-#main #social a {
-    display: block;
-    width: 2rem;
-    height: 2rem;
-    line-height: 2rem;
-    text-align: center;
-}
-#main #social li {
-    margin-inline: 0.25rem;
-    border-radius: 50%;
-}
-#facebook {
-    background-color: #3b5998;
-}
-#twitter {
-    background-color: #1da1f2;
-}
-#rss {
-    background-color: #fcb244;
-}
-#youtube {
-    background-color: #e82f1c;
-}
-#pinterest {
-    background-color: #e82f1c;
-}
-#instagram {
-    background-color: #e14c92;
-}
-#main #social a:hover *{
-    color: rgba(255, 255, 255, 1) !important;
-}
-#main #app {
-    display: flex;
-}
-#main #app img {
-    margin-inline-end: 0.5rem;
-}
-#main #mobile {
-    display: none;
-}
-#main .accordion *{
-    color: var(--bs-secondary-text) !important
-}
-#main .accordion-button:not(.collapse)::after {
-    background-image: url("../img/accordion-active-btn.svg") !important;
-}
-#after *{
-    font-size: 0.9rem !important;
-    font-weight: 100 !important;
-    font-family: 'Poppins', sans-serif;
-}
-#after img {
-    margin-inline: 0.25rem;
-}
+
+
+
+
+
+
